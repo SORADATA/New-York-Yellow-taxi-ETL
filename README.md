@@ -60,6 +60,8 @@ New-York-Yellow-taxi-ETL/
 
 ## 🗓️ Configuration du DAG
 
+https://github.com/SORADATA/New-York-Yellow-taxi-ETL/blob/main/output/airflow.png
+
 | Paramètre    | Valeur              | Description                                     |
 |:-------------|:--------------------|:------------------------------------------------|
 | `dag_id`     | `nyc_yellow_trips_etl` | Identifiant unique du pipeline               |
