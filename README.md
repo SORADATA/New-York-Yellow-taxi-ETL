@@ -60,7 +60,6 @@ New-York-Yellow-taxi-ETL/
 
 ## 🗓️ Configuration du DAG
 
-https://github.com/SORADATA/New-York-Yellow-taxi-ETL/blob/main/output/airflow.png
 
 | Paramètre    | Valeur              | Description                                     |
 |:-------------|:--------------------|:------------------------------------------------|
@@ -77,6 +76,7 @@ DAG
  └── Load
       └── load_data          # Charge vers BigQuery
 ```
+![Airflow DAG](https://raw.githubusercontent.com/SORADATA/New-York-Yellow-taxi-ETL/main/output/airflow.png)
 
 ---
 
