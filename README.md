@@ -77,7 +77,7 @@ DAG
       └── load_data          # Charge vers BigQuery
 ```
 ![Airflow DAG](https://raw.githubusercontent.com/SORADATA/New-York-Yellow-taxi-ETL/main/output/airflow.png)
-
+![BigQuery Table](https://raw.githubusercontent.com/SORADATA/New-York-Yellow-taxi-ETL/main/output/bq.png)
 ---
 
 ## 🧠 Défis Techniques & Décisions de Design
