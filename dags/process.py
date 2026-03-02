@@ -4,16 +4,22 @@ def process_nyc_yellow_taxi(df:pd.DataFrame)-> pd.DataFrame:
     """
     T : Transform DataFrame for ETL
     """
+    #  Normalise toutes les colonnes en minuscules
+    df.columns = df.columns.str.lower()
+    # Colonnes manquantes
+    for col in ["congestion_surcharge", "airport_fee"]:
+        if col not in df.columns:
+            df[col] = 0.0
     # Suppression des NAN
-    df = df.dropna(subset=["passenger_count", "RatecodeID", 
+    df = df.dropna(subset=["passenger_count", "ratecodeid", 
                                "store_and_fwd_flag", "congestion_surcharge", 
                                "airport_fee"])
     # Renommage 
     df = df.rename(columns={
-        "VendorID":"id_vendor",
-        "RatecodeID":"id_ratecode",
-        "PULocationID":"id_pulocation",
-        "DOLocationID":"id_dolocation",
+        "vendorid":"id_vendor",
+        "ratecodeid":"id_ratecode",
+        "pulocationid":"id_pulocation",
+        "dolocationid":"id_dolocation",
     })
     # Gestion des types
     df["passenger_count"] = df["passenger_count"].astype("Int64")
